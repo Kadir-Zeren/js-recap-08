@@ -40,13 +40,14 @@ const findStudent = (name) => {
   let counter = 0;
 
   for (let student of students) {
-    if (student === name) {
-      counter++;
-    }
+    student === name.toLowerCase() && counter++;
   }
-  return counter;
+  return counter === 0
+    ? `${name} can not be foound`
+    : `${name} found ${counter} times`;
 };
 
-console.log(findStudent("ahmet"));
+console.log(findStudent("AHMET"));
+console.log(findStudent("Ahmet"));
 console.log(findStudent("ismet"));
 console.log(findStudent("Alihan"));
