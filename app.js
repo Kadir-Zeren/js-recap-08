@@ -97,3 +97,17 @@ const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
 const biggerThan = salaries.filter((salary) => salary >= 10000);
 console.log(biggerThan);
 console.log(salaries);
+
+const range = salaries.filter((salary) => salary >= 8000 && salary <= 10000);
+console.log(range);
+
+const biggerThan9000 = salaries
+  .filter((s) => s < 9000)
+  .map((s) => Number((s * 1.1).toFixed(2)));
+
+console.log(biggerThan9000);
+
+salaries
+  .filter((s) => s < 9000)
+  .map((s) => Number((s * 1.1).toFixed(2)))
+  .forEach((s) => console.log(s));
